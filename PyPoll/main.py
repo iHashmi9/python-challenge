@@ -17,7 +17,7 @@ with open(csvfile, newline='') as csvfile:
             candidates[candidate] += 1
         else:
             candidates[candidate] = 1
-            
+                     
 winner = max(candidates, key=candidates.get)
 
 percentagevotes = {candidate: (votes / totalvotes) * 100 for candidate, votes in candidates.items()}

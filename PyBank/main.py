@@ -1,7 +1,7 @@
 import os
 import csv
 
-filepath = os.path.join("Resources", "budget_data.csv")
+csvfilepath = os.path.join("Resources", "budget_data.csv")
 
 totalmonths = 0
 nettotal = 0
@@ -9,7 +9,7 @@ prevprofitloss = None
 profitlosschanges = []
 dates = []
 
-with open(filepath,'r') as csvfile:
+with open(csvfilepath,'r') as csvfile:
     csvreader = csv.reader(csvfile)
     header = next(csvreader)
     

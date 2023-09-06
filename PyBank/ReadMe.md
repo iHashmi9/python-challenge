@@ -1,0 +1,3 @@
+- CSV file path as well as command to read from lectures
+- 'prevprofitloss' analysis and logic from BingChat
+- Outputfile code logic as well as 'with open(outputfile..) from lectures

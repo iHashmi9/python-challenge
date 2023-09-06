@@ -1,0 +1,3 @@
+- CSV file location and command open code as well as read from lectures
+- CSV file read and analyse section winner and percentage votes from BingChat
+- Output file logic as well as 'with open(outputfile..) from lectures
