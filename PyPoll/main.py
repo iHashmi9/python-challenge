@@ -19,14 +19,12 @@ with open(csvfile, newline='') as csvfile:
             candidates[candidate] = 1
             
 winner = max(candidates, key=candidates.get)
-#that's a load of shit
-#guy's shit too
 
 percentagevotes = {candidate: (votes / totalvotes) * 100 for candidate, votes in candidates.items()}
 
 print("Election Results")
 print("-----------------------")
-print(f"Total Votes: {total_votes}")
+print(f"Total Votes: {totalvotes}")
 print("-----------------------")
 for candidate, votes in candidates.items():
     print(f"{candidate}: {percentagevotes[candidate]:.3f}% ({votes})")
@@ -34,15 +32,15 @@ print("-----------------------")
 print(f"Winner: {winner}")
 print("-----------------------")
 
-outputfile = "Analysis/election_results.txt"
-with open(output_file, "w") as file:
-    file.write("Election Results")
-    file.write("------------------------")
-    file.write(f"Total Votes: {totalvotes}")
-    file.write("------------------------")
+outputfile = "Analysis/Election_Results.txt"
+with open(outputfile, "w") as file:
+    file.write("Election Results\n")
+    file.write("------------------------\n")
+    file.write(f"Total Votes: {totalvotes}\n")
+    file.write("------------------------\n")
     for candidate, votes in candidates.items():
-        file.write(f"{candidate}: {percentagevotes[candidate]:.3f}% ({votes})")
-    file.write("------------------------")
-    file.write(f"Winner: {winner}")
-    file.write("-------------------------")
+        file.write(f"{candidate}: {percentagevotes[candidate]:.3f}% ({votes})\n")
+    file.write("------------------------\n")
+    file.write(f"Winner: {winner}\n")
+    file.write("-------------------------\n")
     
